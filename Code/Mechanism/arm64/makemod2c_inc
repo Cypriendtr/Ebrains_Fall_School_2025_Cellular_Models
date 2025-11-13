@@ -1,0 +1,72 @@
+./cad.c: ../cad.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "cad.mod" -o "/Users/cyprien/Desktop/EBrains_2025/Code/Mechanism/arm64")
+
+./cad.o: ./cad.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./CAV13.c: ../CAV13.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "CAV13.mod" -o "/Users/cyprien/Desktop/EBrains_2025/Code/Mechanism/arm64")
+
+./CAV13.o: ./CAV13.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./IHnew.c: ../IHnew.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "IHnew.mod" -o "/Users/cyprien/Desktop/EBrains_2025/Code/Mechanism/arm64")
+
+./IHnew.o: ./IHnew.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./kca_callaway.c: ../kca_callaway.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "kca_callaway.mod" -o "/Users/cyprien/Desktop/EBrains_2025/Code/Mechanism/arm64")
+
+./kca_callaway.o: ./kca_callaway.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./KV4_DA.c: ../KV4_DA.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "KV4_DA.mod" -o "/Users/cyprien/Desktop/EBrains_2025/Code/Mechanism/arm64")
+
+./KV4_DA.o: ./KV4_DA.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./KV4_DAsoma.c: ../KV4_DAsoma.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "KV4_DAsoma.mod" -o "/Users/cyprien/Desktop/EBrains_2025/Code/Mechanism/arm64")
+
+./KV4_DAsoma.o: ./KV4_DAsoma.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./KVDRNTS.c: ../KVDRNTS.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "KVDRNTS.mod" -o "/Users/cyprien/Desktop/EBrains_2025/Code/Mechanism/arm64")
+
+./KVDRNTS.o: ./KVDRNTS.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./NA12.c: ../NA12.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "NA12.mod" -o "/Users/cyprien/Desktop/EBrains_2025/Code/Mechanism/arm64")
+
+./NA12.o: ./NA12.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
+./passive.c: ../passive.mod
+	@printf " -> $(C_GREEN)NMODL$(C_RESET) $<\\n"
+	(cd "..";  MODLUNIT=$(NRNUNITS) $(NOCMODL) "passive.mod" -o "/Users/cyprien/Desktop/EBrains_2025/Code/Mechanism/arm64")
+
+./passive.o: ./passive.c
+	@printf " -> $(C_GREEN)Compiling$(C_RESET) $<\\n"
+	$(COMPILE) -I".." $(INCLUDES) -fPIC -c $< -o $@
+
