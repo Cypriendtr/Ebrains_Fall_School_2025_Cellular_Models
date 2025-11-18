@@ -336,31 +336,31 @@ class Average_ABD_nABD_WT_Cell_model(Cell):
 
             # --- NaV12 ---
             sec.insert("Na12")
-            sec.gbar_Na12 = 150 #120
+            sec.gbar_Na12 = 120
     
         # --------- nABD ---------
         for sec in all_nABD:
             sec.insert("CAV13")
-            sec.gbar_CAV13 = 1 #1.25
+            sec.gbar_CAV13 = 1.25
             sec.iLCa_CAV13 = 0
 
             # --- NaV12 ---
             sec.insert("Na12")
-            sec.gbar_Na12 = 50 #75
+            sec.gbar_Na12 = 75
 
         # --------- axonstart ---------
         self.axonstart.insert("CAV13")
-        self.axonstart.gbar_CAV13 = 1 #1.25
+        self.axonstart.gbar_CAV13 = 1.25
         self.axonstart.iLCa_CAV13 = 0
 
         # --- NaV12 ---
         self.axonstart.insert("Na12")
-        self.axonstart.gbar_Na12 = 75 #50
+        self.axonstart.gbar_Na12 = 75 
         
         # --------- Soma ---------
         # --- CAV13 ---
         self.soma.insert("CAV13")
-        self.soma.gbar_CAV13 = 1 #1,25
+        self.soma.gbar_CAV13 = 1.25
         self.soma.iLCa_CAV13 = 0
 
         # --- Ih ---
@@ -378,7 +378,7 @@ class Average_ABD_nABD_WT_Cell_model(Cell):
 
         # --- Na12 ---
         self.soma.insert("Na12")
-        self.soma.gbar_Na12 = 50 #75
+        self.soma.gbar_Na12 = 75
 
         # --- cad ---
         self.soma.insert("cad")
