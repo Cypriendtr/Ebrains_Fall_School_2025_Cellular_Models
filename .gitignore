@@ -1,5 +1,7 @@
 # Mac file 
 .DS_Store
+*arm64
+*x86-64
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
