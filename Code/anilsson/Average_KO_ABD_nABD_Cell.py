@@ -30,13 +30,14 @@ def load_dictionary_morphology() -> dict[str, float]:
         value_avg = dataframe1.iloc[i]["Avg.1"]
         dict_morphology[measure] = value_avg
     dataframe2 = pd.read_excel(path_excel, 
-                            skiprows=range(22),
+                            skiprows=range(21),
                             usecols=[2, 5, 12],
                             )
     dataframe2.dropna(inplace=True)
     dataframe2 = dataframe2.T.reset_index()
     dataframe2.columns = dataframe2.iloc[0]
     dataframe2 = dataframe2.iloc[1:]
+    dataframe2 = dataframe2[[col for col in dataframe2.columns if col != 'Unnamed: 2']]
     for i in range(len(dataframe2.columns)):
         measure = dataframe2.columns[i]
         value = dataframe2[measure].iloc[1]
@@ -157,7 +158,8 @@ class Average_ABD_nABD_KO_Cell_model(Cell):
             self.nABD[i].L = length
 
         lengths_nABD_sec = np.ones(len(self.nABD_sec)) * dict_morph["nABD avg seg length"] # WT: 90
-        lengths_nABD_sec[-2] = dict_morph["nABD avg seg length"] / 2 # shorter one
+        lengths_nABD_sec[-1] = dict_morph["nABD avg seg length"] / 2 # shorter one
+        print(lengths_nABD_sec)
         for i, length in enumerate(lengths_nABD_sec):
             self.nABD_sec[i].L = length
 
