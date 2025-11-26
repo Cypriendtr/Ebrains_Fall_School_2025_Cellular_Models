@@ -18,7 +18,7 @@ def load_dictionary_morphology() -> dict[str, float]:
         Dictionary containing all of the average morphology parameters.
     """
     dict_morphology = {}
-    path_excel = f"{Path(__file__).parent.parent.parent}/Neuron_morphologies/Averaged_Morpho.xlsx"
+    path_excel = f"{Path(os.path.abspath(__file__)).parent.parent}/Neuron_morphologies/Averaged_Morpho.xlsx"
     # put the first part of the values inside the dictionary
     dataframe1 = pd.read_excel(path_excel, 
                             skiprows=range(2),
@@ -159,7 +159,6 @@ class Average_ABD_nABD_KO_Cell_model(Cell):
 
         lengths_nABD_sec = np.ones(len(self.nABD_sec)) * dict_morph["nABD avg seg length"] # WT: 90
         lengths_nABD_sec[-1] = dict_morph["nABD avg seg length"] / 2 # shorter one
-        print(lengths_nABD_sec)
         for i, length in enumerate(lengths_nABD_sec):
             self.nABD_sec[i].L = length
 
